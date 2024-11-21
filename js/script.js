@@ -31,6 +31,7 @@ find_btn.addEventListener('click', () => {
 		fetch(API)
 			.then(res => {
 				if (!res.ok) {
+					alert('Пользователь не найден')
 					throw new Error('Пользователь не найден')
 				}
 				return res.json()
